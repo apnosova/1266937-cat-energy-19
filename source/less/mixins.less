@@ -1,0 +1,35 @@
+.fancy-font() {
+  font-family: @fancy-font;
+  color: @black-two;
+}
+
+.fancy-font-medium() {
+  font-family: @fancy-font;
+  font-weight: 500;
+  color: @black-two;
+  text-transform: uppercase;
+}
+
+.text-size(@font-size; @line-height) {
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.big-title() {
+  .fancy-font();
+  font-size: 36px;
+  line-height: 60px;
+}
+
+.fancy-subtitle() {
+  .fancy-font();
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.subtitle-uppercase() {
+  .fancy-font();
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}

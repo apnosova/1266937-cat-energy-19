@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -30,7 +31,7 @@
       <h1 class="page-main__title">Подбор программы</h1>
       <form class="request-form" method="post" action="https://echo.htmlacademy.ru">
         <p class="request-form__desc">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <fieldset class="request-form__cat-profile">
+        <fieldset class="request-form__fieldset">
         <div class="request-form__content">
           <label class="request-form__label" for="cat-name">Имя:*</label>
           <input class="request-form__input" id="cat-name" type="text" name="cat-name" placeholder="Барсик">
@@ -44,7 +45,7 @@
           <input class="request-form__input" id="cat-age" type="number" name="cat-age" placeholder="7">
         </div>
       </fieldset>
-      <fieldset class="request-form__program-options">
+      <fieldset class="request-form__fieldset">
         <ul class="request-form__list">
           <li class="request-form__item">
             <input class="request-form__input" type="radio" name="program" value="slim" id="slim" checked>
@@ -60,8 +61,8 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="request-form__owner-contacts">
-        <legend class="request-form__legend">Контактные данные (владельца кота)</legend>
+      <fieldset class="request-form__fieldset">
+        <legend class="request-form__title">Контактные данные (владельца кота)</legend>
         <div class="request-form__content">
           <label class="request-form__label" for="email">E-mail:*</label>
           <input class="request-form__input request-form__input--email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com">
@@ -71,12 +72,12 @@
           <input class="request-form__input request-form__input--phone" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
         </div>
       </fieldset>
-      <fieldset class=request-form__content>
-        <legend class="request-form__legend">Комментарий</legend>
-        <input class="request-form__input" id="request-form__comment" type="text" name="comment" placeholder="Расскажите обо всех повадках кота">
-      </fieldset>
-      <fieldset>
-        <legend class="request-form__legend">Дополнительно</legend>
+      <div class="request-form__content">
+        <label class="request-form__title" for="cat-habits">Комментарий</label>
+        <textarea class="request-form__textarea" id="cat-habits" placeholder="Расскажите обо всех повадках кота"></textarea>
+      </div>
+      <fieldset class="request-form__fieldset">
+        <legend class="request-form__title">Дополнительно</legend>
         <ul class="request-form__list">
           <li class="request-form__item">
             <input class="request-form__input" type="checkbox" name="sweetener" id ="sweetener" checked>
@@ -104,9 +105,12 @@
       <footer class="page-footer">
         <div class="page-footer__contacts contacts">
           <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts-text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <div class="page-footer__map">
           <img class="contacts__map" src="https://via.placeholder.com/150x150" width="320" height="400" alt="Карта">
+          </div>
         </div>
+        <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <img class="page-footer__logo-image" src="https://via.placeholder.com/150x150" width="128" height="24" alt="Логотип Кэт энерджи">
         </div>
@@ -127,6 +131,7 @@
           <span class="copyright__text">HTML Academy</span>
           <a class="copyright__link" href=https://htmlacademy.ru/intensive/adaptive>HTML и CSS, уровень 2</a>
         </div>
+      </div>
       </footer>
     </main>
   </body>
