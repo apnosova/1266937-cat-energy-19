@@ -12,6 +12,7 @@
 
 .request-form__title {
   .fancy-subtitle();
+  text-transform: none;
 }
 
 .request-form__label {
@@ -21,6 +22,7 @@
 .request-form__input,
 .request-form__textarea {
   font-family: inherit;
+  font-size: inherit;
   text-transform: inherit;
 }
 
@@ -29,10 +31,17 @@
 }
 
 .request-form__footnote {
-  line-height: 16px;
   text-align: center;
+
+  .request-form__footnote-text {
+    .text-size(14px; 1.14);
+  }
 }
 
 .request-form__item {
   list-style: none;
+}
+
+.request-form__fieldset {
+  border: none;
 }
