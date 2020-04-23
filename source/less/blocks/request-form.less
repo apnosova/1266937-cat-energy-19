@@ -1,3 +1,8 @@
+.request-form {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .request-form__desc {
   .fancy-font();
   text-transform: uppercase;
@@ -10,7 +15,13 @@
   text-transform: uppercase;
 }
 
+.request-form__list {
+  .list-reset();
+}
+
 .request-form__title {
+  margin-bottom: 20px;
+
   .fancy-subtitle();
   text-transform: none;
 }
@@ -43,5 +54,62 @@
 }
 
 .request-form__fieldset {
+  margin-bottom: 20px;
+
   border: none;
+}
+
+.request-form__content--comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.request-form__fieldset--options {
+  border: 1px solid #cdcdcd;
+}
+
+@media (min-width: @tablet-width) {
+  .request-form {
+    width: 708px;
+  }
+
+  .request-form__list--extra {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .request-form__item {
+    width: 300px;
+  }
+
+  .request-form__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .request-form__footnote {
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .request-form {
+    width: 1220px;
+  }
+
+  .request-form__cat-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .request-form__owner-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .request-form__item {
+    width: 190px;
+  }
 }

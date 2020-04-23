@@ -1,4 +1,8 @@
 .slider {
+  width: 260px;
+  margin: 0 auto;
+  padding: 30px;
+
   background-color: @bg-grey;
 }
 
@@ -17,9 +21,10 @@
   text-align: center;
 }
 
-.slider__stats-total {
+.slider__food-expenses {
   .fancy-font();
   line-height: 1.43;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -30,5 +35,61 @@
 
   &--after {
     text-align: right;
+  }
+}
+
+.slider__table {
+  width: 100%;
+}
+
+.slider__range-controls {
+  display: flex;
+}
+
+@media (min-width: @tablet-width) {
+  .slider {
+    width: 708px;
+  }
+
+  .slider__stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .slider__table {
+    width: 366px;
+  }
+
+  .slider__food-expenses {
+    width: 174px;
+    margin: 0;
+    padding: 0;
+
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider {
+    display: flex;
+    justify-content: space-between;
+    width: 1220px;
+  }
+
+  .slider__living-example {
+    width: 430px;
+  }
+
+  .slider__stats {
+    display: inline;
+  }
+
+  .slider__food-expenses {
+    display: flex;
+    justify-content: space-between;
+    width: 326px;
+
+    text-align: left;
   }
 }
