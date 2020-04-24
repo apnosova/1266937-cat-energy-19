@@ -1,3 +1,23 @@
-.page-footer__wrapper {
+.page-footer__bg-wrapper {
   background-color: @bg-grey;
+}
+
+.page-footer__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    width: 1220px;
+  }
 }

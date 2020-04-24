@@ -1,0 +1,87 @@
+.add-goods {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.add-goods__item {
+  min-height: 130px;
+}
+
+.add-goods__title {
+  .fancy-subtitle();
+}
+
+.add-goods__product-title {
+  .fancy-font();
+  .text-size(16px; 1);
+  color: @black-three;
+  text-transform: uppercase;
+}
+
+.add-goods__product-desc {
+  line-height: 1;
+}
+
+.add-goods__price {
+  text-align: right;
+}
+
+.add-goods__list {
+  .list-reset();
+
+  list-style: none;
+}
+
+.add-goods__gift {
+  min-height: 200px;
+
+  background-color: @bg-green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.add-goods__gift-desc {
+  .text-size(16px; 1.25);
+  text-align: center;
+  color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .add-goods {
+    width: 708px;
+  }
+
+  .add-goods__weight {
+    text-align: right;
+  }
+
+  .add-goods__wrapper {
+    min-height: 140px;
+  }
+
+  .add-goods__product-desc tr {
+    display: inline-block;
+  }
+
+  .add-goods__product-desc {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .add-goods {
+    width: 1220px;
+  }
+
+  .add-goods__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .add-goods__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

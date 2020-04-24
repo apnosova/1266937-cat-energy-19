@@ -1,10 +1,17 @@
+.programs {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .programs__title {
   .fancy-font();
   .text-size(24px; 1.54);
   text-transform: uppercase;
 }
 
-.programs__item {
+.programs__list {
+  .list-reset();
+
   list-style: none;
 }
 
@@ -12,4 +19,32 @@
   .fancy-font();
   .text-size(16px; 1);
   text-transform: uppercase;
+}
+
+.programs__item {
+  margin-bottom: 20px;
+  padding: 20px;
+
+  background-color: @bg-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .programs {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs {
+    width: 1220px;
+  }
+
+  .programs__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .programs__item {
+    width: 465px;
+  }
 }

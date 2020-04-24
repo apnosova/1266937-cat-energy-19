@@ -1,7 +1,31 @@
+.contacts {
+  width: 320px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .contacts__title {
   .subtitle-uppercase();
 }
 
 .contacts__text {
-  text-align: 1.43;
+  line-height: 1.43;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    display: flex;
+    justify-content: space-between;
+    width: 708px;
+  }
+
+  .contacts__text {
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    width: 1220px;
+  }
 }

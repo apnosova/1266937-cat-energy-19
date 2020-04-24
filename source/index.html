@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -11,8 +12,7 @@
         <img class="page-header__logo-image" src="https://via.placeholder.com/150x150" width="191" height="39" alt="Логотип Кэт энерджи">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--active">Главная</a>
@@ -24,16 +24,15 @@
               <a class="main-nav__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
-        </div>
       </nav>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Кэт энерджи - интернет-магазин фитнес еды для котиков</h1>
       <section class="hero-header">
         <div class="hero-header__wrapper">
-        <h2 class="hero-header__title">Функциональное питание для котов</h2>
-        <p class="hero-header__slogan">Занялся собой? Займись котом!</p>
-        <img class="hero-header__image" src="https://via.placeholder.com/150x150" width="280" height="270" alt="Банка Кэт энерджи">
+          <h2 class="hero-header__title">Функциональное питание для котов</h2>
+          <p class="hero-header__slogan">Занялся собой? Займись котом!</p>
+          <img class="hero-header__image" src="https://via.placeholder.com/150x150" width="280" height="270" alt="Банка Кэт энерджи">
         </div>
         <a class="hero-header__pickup-program button--pickup-program button" href="form.html">Подобрать программу</a>
       </section>
@@ -70,26 +69,37 @@
         </ul>
       </section>
       <section class="slider">
-        <h2 class="slider__title">Живой пример</h2>
-        <p class="slider__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <table class="slider__stats">
-          <tr>
-            <th class="slider__stats-value">5 кг</th>
-            <th class="slider__stats-value">60 дней</th>
-          </tr>
-          <tr>
-            <td class="slider__stats-field">снижение веса</td>
-            <td class="slider__stats-field">затрачено времени</td>
-          </tr>
-        </table>
-          <p class="slider__stats-total">Затраты на питание: 15 000 руб.</p>
-        <img class="slider__before-image" src="https://via.placeholder.com/150x150" width="311" height="232" alt="Фото кота до">
-        <div class="slider__range-controls">
-          <button class="slider__range-value slider__range-value--before">Было</button>
-          <div class="slider__scale">
-            <div class="slider__bar"></div>
+        <div class="slider__wrapper">
+        <div class="slider__living-example">
+          <h2 class="slider__title">Живой пример</h2>
+          <p class="slider__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="slider__stats">
+            <table class="slider__table">
+              <tr>
+                <th class="slider__stats-value">5 кг</th>
+                <th class="slider__stats-value">60 дней</th>
+              </tr>
+              <tr>
+                <td class="slider__stats-field">снижение веса</td>
+                <td class="slider__stats-field">затрачено времени</td>
+              </tr>
+            </table>
+            <p class="slider__food-expenses">
+              <span>Затраты на питание:</span>
+              <span>15 000 руб.</span>
+            </p>
           </div>
-          <button class="slider__range-value slider__range-value--after">Стало</button>
+        </div>
+        <div class="slider__picture">
+          <img class="slider__before-image" src="https://via.placeholder.com/150x150" width="311" height="232" alt="Фото кота до">
+          <div class="slider__range-controls">
+            <button class="slider__range-value slider__range-value--before">Было</button>
+            <div class="slider__scale">
+              <div class="slider__bar"></div>
+            </div>
+            <button class="slider__range-value slider__range-value--after">Стало</button>
+          </div>
+        </div>
         </div>
         </section>
       <footer class="page-footer">
@@ -97,6 +107,7 @@
           <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
           <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
+        <div class="page-footer__bg-wrapper">
         <div class="page-footer__map">
           <img class="page-footer__map-image" src="https://via.placeholder.com/150x150" width="320" height="400" alt="Карта">
         </div>
@@ -122,6 +133,7 @@
           <a class="copyright__link" href=https://htmlacademy.ru/intensive/adaptive>HTML и CSS, уровень 2</a>
           </div>
         </div>
+      </div>
       </footer>
     </main>
   </body>
