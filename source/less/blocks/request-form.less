@@ -1,11 +1,33 @@
 .request-form {
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 
-.request-form__desc {
-  .fancy-font();
+.request-form__text {
+  margin: 0;
+  margin-bottom: 38px;
+
+  .oswald();
   text-transform: uppercase;
+}
+
+.request-form__fieldset {
+  margin: 0;
+  margin-bottom: 21px;
+  padding: 0;
+
+  border: none;
+}
+
+.request-form__fieldset--cat {
+  margin-bottom: 10px;
+}
+
+.request-form__fieldset--programs {
+  padding-top: 25px;
+
+  border: 1px solid #ededed;
 }
 
 .request-form__content,
@@ -15,15 +37,58 @@
   text-transform: uppercase;
 }
 
+.request-form__content {
+  margin-bottom: 14px;
+
+  &--name,
+  &--weight,
+  &--age,
+  &--email,
+  &--phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .request-form__list {
   .list-reset();
 }
 
+.request-form__item {
+  margin-bottom: 23px;
+
+  list-style: none;
+}
+
 .request-form__title {
-  margin-bottom: 20px;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
 
   .fancy-subtitle();
   text-transform: none;
+
+  overflow: hidden;
+
+  &::after {
+    content: "";
+
+    position: relative;
+    right: -14px;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 100%;
+    height: 3px;
+    margin-right: -100%;
+
+    background: @bg-green;
+    border: solid @bg-green;
+    border-width: 0 10px;
+  }
 }
 
 .request-form__label {
@@ -37,26 +102,145 @@
   text-transform: inherit;
 }
 
-.request-form__submit-button {
-  border: none;
+.request-form__textarea {
+  min-height: 150px;
+  padding-top: 9px;
+  padding-left: 15px;
+  padding-right: 12px;
+  padding-bottom: 15px;
+
+  resize: none;
 }
 
-.request-form__footnote {
-  text-align: center;
+.request-form__input {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 9px;
 
-  .request-form__footnote-text {
-    .text-size(14px; 1.14);
+  border: 1px solid rgba(205, 205, 205, 0.5);
+
+  &--name {
+    width: 229px;
+  }
+
+  &--weight {
+    width: 204px;
+  }
+
+  &--age {
+    width: 172px;
+  }
+
+  &--email {
+    width: 219px;
+  }
+
+  &--phone {
+    width: 204px;
   }
 }
 
-.request-form__item {
-  list-style: none;
+//Кастомные радиокнопки
+
+.request-form__fieldset--options .request-form__label {
+  position: relative;
+
+  display: block;
+  padding-left: 25px;
+
+  cursor: pointer;
+  user-select: none;
 }
 
-.request-form__fieldset {
-  margin-bottom: 20px;
+.request-form__input--radio + label::before {
+  content: "";
 
-  border: none;
+  position: absolute;
+  top: -5px;
+  left: -20px;
+
+  width: 30px;
+  height: 30px;
+
+  border: @border-grey;
+  border-radius: 50%;
+}
+
+.request-form__input--radio:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: -11px;
+
+  width: 12px;
+  height: 12px;
+
+  background-color: @bg-green;
+  border-radius: 50%;
+}
+
+.request-form__input--radio:hover + label::before {
+  border-color: #bababa;
+}
+
+.request-form__input--radio:checked:hover + label::before {
+  border-color: #bababa;
+}
+
+.request-form__input--radio:focus + label {
+  &::before {
+    border-color: #bababa;
+  }
+  color: rgba(34, 34, 34, 0.3);
+}
+
+.request-form__input--radio:checked:focus + label {
+  &::before {
+    border-color: #bababa;
+  }
+
+  &::after {
+    opacity: 0.3;
+  }
+
+  color: rgba(34, 34, 34, 0.3);
+}
+
+.request-form__input--radio:checked:disabled + label {
+  &::before {
+    background: rgba(186, 186, 186, 0.3);
+  }
+
+  &::after {
+    opacity: 0.3;
+  }
+}
+
+.request-form__input--radio:disabled + label {
+  &::before {
+    background: rgba(186, 186, 186, 0.3);
+  }
+
+  &::after {
+    opacity: 0.3;
+  }
+}
+
+//Кастомные чекбоксы
+
+.request-form__input--checkbox + label::before {
+  content: "";
+
+  position: absolute;
+  top: -5px;
+  left: -20px;
+
+  width: 30px;
+  height: 30px;
+
+  border: @border-grey;
 }
 
 .request-form__content--comment {
@@ -65,13 +249,99 @@
   margin-bottom: 20px;
 }
 
-.request-form__fieldset--options {
-  border: 1px solid #ededed;
+.request-form__submit {
+  margin-bottom: 21px;
+}
+
+.request-form__legend {
+  display: block;
+
+  .text-size(14px; 1.14);
+  text-align: center;
+}
+
+.request-form sup {
+  vertical-align: top;
+}
+
+.request-form__legend sup {
+  margin-right: 5px;
 }
 
 @media (min-width: @tablet-width) {
   .request-form {
     width: 708px;
+    padding: 0;
+  }
+
+  .request-form__text {
+    width: 60%;
+    margin-bottom: 66px;
+
+    .text-size(20px; 1.5);
+  }
+
+  .request-form__wrapper {
+    width: 522px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .request-form__fieldset {
+    margin-bottom: 52px;
+  }
+
+  .request-form__title {
+    .text-size(36px; 1);
+  }
+
+  .request-form__content,
+  .request-form__list {
+    .text-size(20px; 1);
+  }
+
+  .request-form__list {
+    padding-top: 36px;
+  }
+
+  .request-form__item {
+    margin-bottom: 33px;
+    padding-left: 40px;
+  }
+
+  .request-form__content {
+    margin-bottom: 20px;
+  }
+
+  .request-form__input {
+    &--name {
+      width: 567px;
+    }
+
+    &--weight {
+      width: 536px;
+    }
+
+    &--age {
+      width: 497px;
+    }
+  }
+
+  .request-form__input--radio + label::before {
+    top: -7px;
+    left: -15px;
+
+    width: 40px;
+    height: 40px;
+  }
+
+  .request-form__input--radio:checked + label::after {
+    left: -4px;
+
+    width: 18px;
+    height: 18px;
   }
 
   .request-form__list--extra {
@@ -80,16 +350,12 @@
     flex-wrap: wrap;
   }
 
-  .request-form__item {
-    width: 300px;
+  .request-form__submit {
+    margin: 0;
   }
 
-  .request-form__wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .request-form__footnote {
+  .request-form__legend {
+    .text-size(16px; 1);
     text-align: left;
   }
 }
@@ -99,17 +365,39 @@
     width: 1220px;
   }
 
-  .request-form__cat-info {
+  .request-form__info {
     display: flex;
     justify-content: space-between;
   }
 
-  .request-form__owner-info {
+  .request-form__text {
+    width: 30%;
+  }
+
+  .request-form__fieldset--cat {
+    width: 568px;
+  }
+
+  .request-form__fieldset--programs {
+    width: 570px;
+  }
+
+  .request-form__owner {
     display: flex;
     justify-content: space-between;
   }
 
-  .request-form__item {
-    width: 190px;
+  .request-form__input {
+    &--name {
+      width: 506px;
+    }
+
+    &--weight {
+      width: 475px;
+    }
+
+    &--age {
+      width: 436px;
+    }
   }
 }

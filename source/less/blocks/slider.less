@@ -3,36 +3,90 @@
 }
 
 .slider__wrapper {
-  width: 260px;
+  width: 280px;
   margin: 0 auto;
-  padding: 30px;
+  padding-bottom: 38px;
+  padding-top: 18px;
 }
 
 .slider__title {
+  margin: 0;
+  margin-bottom: 23px;
+
   .big-title();
 }
 
-.slider__stats-value {
+.slider__text {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.slider__table {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 19px;
+}
+
+.slider__list {
+  .list-reset();
+
+  list-style: none;
+}
+
+.slider__value {
+  width: 124px;
+  padding-bottom: 15px;
+  padding-top: 13px;
+
   .fancy-subtitle();
   text-align: center;
   text-transform: uppercase;
+
+  border: @border-grey;
+  border-radius: 3px;
 }
 
-.slider__stats-field {
+.slider__field {
+  width: 87px;
+  margin: 0 auto;
+  margin-top: -8px;
+  padding-left: 16px;
+  padding-right: 16px;
+
   .text-size(12px; 1);
   text-align: center;
+
+  background-color: @bg-grey;
 }
 
-.slider__food-expenses {
-  .fancy-font();
+.slider__expenses {
+  margin: 0;
+  margin-bottom: 40px;
+
+  .oswald();
   line-height: 1.43;
   text-align: center;
   text-transform: uppercase;
 }
 
-.slider__range-value {
+.slider__before-image {
+  margin-bottom: 35px;
+}
+
+.slider__range-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__caption {
+  display: block;
+  padding: 0;
+  padding-bottom: 6px;
+
   .subtitle-uppercase();
 
+  background-color: @bg-grey;
   border: none;
 
   &--after {
@@ -40,17 +94,54 @@
   }
 }
 
-.slider__table {
-  width: 100%;
+.slider__scale {
+  position: relative;
+
+  width: 84px;
+  height: 14px;
+  margin-left: 18px;
+  margin-right: 18px;
+
+  background-color: @bg-white;
+  border: @border-grey;
+  border-radius: 6px;
 }
 
-.slider__range-controls {
-  display: flex;
+.slider__control {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+
+  width: 35px;
+  height: 6px;
+
+  background-color: @bg-green;
+  border: none;
+  border-radius: 3px;
 }
 
 @media (min-width: @tablet-width) {
+  .slider {
+    background: linear-gradient(@bg-white 57%, @bg-grey 43%);
+    border-top: @border-grey;
+  }
+
   .slider__wrapper {
     width: 708px;
+    padding-top: 25px;
+  }
+
+  .slider__title {
+    margin-bottom: 65px;
+
+    .text-size(60px; 1);
+  }
+
+  .slider__text {
+    width: 676px;
+    margin-bottom: 54px;
+
+    .text-size(16px; 1.5);
   }
 
   .slider__stats {
@@ -59,39 +150,144 @@
     align-items: center;
   }
 
-  .slider__table {
-    width: 366px;
+  .slider__list {
+    margin-right: 42px;
   }
 
-  .slider__food-expenses {
+  .slider__value {
+    width: 162px;
+    padding-bottom: 20px;
+
+    .text-size(30px; 1.23);
+  }
+
+  .slider__field {
+    width: 140px;
+    margin-top: -8px;
+    padding-left: 8px;
+    padding-right: 9px;
+
+    font-size: 14px;
+
+    background-color: @bg-white;
+  }
+
+  .slider__expenses {
     width: 174px;
     margin: 0;
     padding: 0;
 
+    .text-size(20px; 1);
     text-align: right;
+  }
+
+  .slider__scale {
+    width: 428px;
+    height: 6px;
+
+    border-radius: 2.5px;
+    background-color: #dcdcdc;
+  }
+
+  .slider__control {
+    position: relative;
+    top: -15px;
+    left: 46%;
+
+    width: 34px;
+    height: 34px;
+
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border: 1px solid @border-grey;
+    border-radius: 50%;
+    background-color: @bg-white;
+
+    &:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      border: 2px solid @bg-green;
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+      background-color: @bg-green;
+    }
+  }
+
+  .slider__caption {
+    padding-bottom: 5px;
+
+    .text-size(20px; 1);
+
+    border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
+
+    &:hover {
+      border-bottom: 1px solid rgba(17, 17, 17, 0.4);
+    }
+
+    &:active {
+      padding-bottom: 6px;
+
+      border-bottom: none;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .slider {
+    background: linear-gradient(@bg-white 30%, 30%, @bg-grey 70%);
+    border-top: none;
+  }
+
   .slider__wrapper {
     display: flex;
     justify-content: space-between;
     width: 1220px;
   }
 
-  .slider__living-example {
-    width: 430px;
+  .slider__title {
+    margin-bottom: 145px;
+  }
+
+  .slider__text {
+    width: 431px;
   }
 
   .slider__stats {
-    display: inline;
+    flex-direction: column;
+    margin-bottom: 62px;
   }
 
-  .slider__food-expenses {
+  .slider__table {
+    margin-bottom: 62px;
+  }
+
+  .slider__field {
+    background-color: @bg-grey;
+  }
+
+  .slider__expenses {
     display: flex;
     justify-content: space-between;
     width: 326px;
 
     text-align: left;
+  }
+
+  .slider__before-image {
+    height: 499px;
   }
 }

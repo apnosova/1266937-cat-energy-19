@@ -1,21 +1,72 @@
 .button {
   display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding: 10px;
 
-  .fancy-font();
+  .oswald();
   .text-size(16px; 1.25);
   text-align: center;
   color: @white;
   text-transform: uppercase;
 
   background-color: @bg-green;
+  border: none;
 
   &--pickup-program {
     .text-size(14px; 1.29);
   }
 
   &--show-all {
+    .text-size(16px; 1);
     color: @greyish-brown;
 
     background-color: @bg-grey;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    &--pickup-program {
+      width: 245px;
+      padding: 15px;
+
+      .text-size(20px; 1);
+    }
+
+    &--order {
+      width: 249px;
+    }
+
+    &--show-all {
+      width: 249px;
+    }
+
+    &--add-order {
+      width: auto;
+    }
+
+    &--submit {
+      width: 283px;
+      padding: 15px;
+
+      .text-size(20px; 1);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button {
+    &--order {
+      width: 169px;
+    }
+
+    &--show-all {
+      width: 169px;
+    }
+
+    &--add-order {
+      width: 245px;
+    }
   }
 }
