@@ -1,6 +1,23 @@
 .page-main__title {
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
+  margin-bottom: 30px;
 
   .big-title();
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__title {
+    width: 708px;
+    margin-bottom: 135px;
+
+    .text-size(60px; 1);
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__title {
+    width: 1220px;
+  }
 }

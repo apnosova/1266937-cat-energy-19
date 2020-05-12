@@ -1,3 +1,28 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 22px;
+}
+
 .copyright__text {
+  display: block;
+
   .text-size(16px; 1);
+  color: @greyish-brown;
+
+  &:hover {
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.copyright__link {
+  &:hover path {
+    fill: @bg-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
