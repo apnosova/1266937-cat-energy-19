@@ -1,71 +1,28 @@
-.catalog {
-  width: 320px;
-  margin: 0 auto;
-}
-
 .catalog__list {
   .list-reset();
-}
-
-.catalog__item {
-  padding-left: 19px;
-  padding-right: 19px;
-  padding-bottom: 24px;
-
-  border: @border-light-grey;
-  border-bottom: none;
 
   list-style: none;
+}
+
+.catalog__item-wrapper {
+  border: @border-light-grey;
+  border-bottom: none;
 
   &:last-child {
     border-bottom: @border-light-grey;
   }
 }
 
-.catalog__item--show-more .catalog__title {
-  position: relative;
-
-  margin: 0;
-  margin-top: 80px;
-  margin-bottom: 9px;
-
-  text-align: center;
-
-  &::before,
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -40px;
-    left: 50%;
-
-    width: 30px;
-    height: 2px;
-
-    background-color: #cfcfcf;
-  }
-
-  &::before {
-    transform: translateX(-50%);
-  }
-
-  &::after {
-    transform: translateX(-50%) rotate(90deg);
-  }
+.catalog__item {
+  width: 280px;
+  margin: 0 auto;
+  padding-bottom: 24px;
 }
 
-.catalog__item--show-more .catalog__desc {
-  width: 100%;
-  margin: 0;
-  margin-bottom: 23px;
-
-  .text-size(12px; 1.33);
-  text-align: center;
-}
-
-.catalog__wrapper {
+.catalog__desc-wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .catalog__image {
@@ -78,13 +35,56 @@
   .text-size(12px; 1.33);
 
   border-collapse: collapse;
+
+  &--show-more {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 23px;
+
+    .text-size(12px; 1.33);
+    text-align: center;
+  }
 }
 
 .catalog__title {
+  width: 60%;
   margin-bottom: 15px;
 
   text-align: left;
   .subtitle-uppercase();
+
+  &--show-more {
+    width: 100%;
+    position: relative;
+
+    margin: 0;
+    margin-top: 80px;
+    margin-bottom: 9px;
+
+    text-align: center;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: -40px;
+      left: 50%;
+
+      width: 30px;
+      height: 2px;
+
+      background-color: #cfcfcf;
+    }
+
+    &::before {
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      transform: translateX(-50%) rotate(90deg);
+    }
+  }
 }
 
 .catalog__link {
@@ -103,30 +103,32 @@
 }
 
 @media (min-width: @tablet-width) {
-  .catalog {
-    width: 708px;
-  }
-
-  .catalog__wrapper {
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
   .catalog__list {
+    width: 708px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
+  .catalog__item-wrapper {
+    margin: 0;
+    margin-bottom: 140px;
+
+    border: none;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
   .catalog__item {
     width: 324px;
-    margin-bottom: 140px;
     padding-left: 38px;
     padding-right: 38px;
     padding-bottom: 40px;
 
     background-color: @bg-grey;
-    border: none;
 
     &--show-more {
       border: 1px solid #ededed;
@@ -134,41 +136,20 @@
     }
   }
 
-  .catalog__item--show-more .catalog__title {
-    width: 100%;
-    margin-top: 164px;
-    margin-bottom: 25px;
-
-    .text-size (20px; 1);
-
-    &::before,
-    &::after {
-      top: -80px;
-
-      width: 61px;
-      height: 1px;
-    }
-  }
-
-  .catalog__item--show-more .catalog__desc {
-    margin-bottom: 85px;
-
-    .text-size(16px; 1.25);
+  .catalog__desc-wrapper {
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .catalog__image {
     margin-bottom: 33px;
 
     &--small {
-      width: 161px;
-      height: 172px;
       margin-top: -47px;
     }
 
     &--big {
-      width: 195px;
-      height: 208px;
-      margin-top: -83px;
+      margin-top: -71px;
     }
   }
 
@@ -177,6 +158,12 @@
     margin-bottom: 33px;
 
     .text-size(16px; 1);
+
+    &--show-more {
+      margin-bottom: 75px;
+
+      .text-size(16px; 1.25);
+    }
   }
 
   .catalog__desc tr {
@@ -190,6 +177,22 @@
 
     .text-size(20px; 1);
     text-align: center;
+
+    &--show-more {
+      width: 100%;
+      margin-top: 115px;
+      margin-bottom: 25px;
+
+      .text-size (20px; 1);
+
+      &::before,
+      &::after {
+        top: -80px;
+
+        width: 61px;
+        height: 1px;
+      }
+    }
   }
 
   .catalog__field,
@@ -200,7 +203,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .catalog {
+  .catalog__list {
     width: 1220px;
   }
 
