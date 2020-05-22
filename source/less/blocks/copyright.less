@@ -1,24 +1,21 @@
 .copyright {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-top: 15px;
   padding-bottom: 22px;
 }
 
-.copyright__text {
-  display: block;
+.copyright__icon {
+  fill: @brownish-grey;
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   .text-size(16px; 1);
   color: @greyish-brown;
 
-  &:hover {
-    color: rgba(68, 68, 68, 0.3);
-  }
-}
-
-.copyright__link {
-  &:hover path {
+  &:hover .copyright__icon {
     fill: @bg-green;
   }
 
