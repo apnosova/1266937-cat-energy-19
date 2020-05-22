@@ -14,16 +14,27 @@
   border: none;
 
   &--pickup-program {
+    width: calc(100% - 12%);
+
     .text-size(14px; 1.29);
   }
 
+  &--order {
+    width: auto;
+  }
+
   &--show-all {
+    width: auto;
     padding: 12px;
 
     .text-size(16px; 1);
     color: @greyish-brown;
 
     background-color: @bg-grey;
+  }
+
+  &--extra-order {
+    width: auto;
   }
 }
 
@@ -37,11 +48,11 @@
     }
 
     &--order {
-      width: 249px;
+      width: auto;
     }
 
     &--show-all {
-      width: 249px;
+      width: auto;
     }
 
     &--add-order {
@@ -68,6 +79,14 @@
     }
 
     &--add-order {
+      width: 245px;
+    }
+
+    &--submit {
+      width: 568px;
+    }
+
+    &--extra-order {
       width: 245px;
     }
   }

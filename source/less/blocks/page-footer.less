@@ -2,14 +2,8 @@
   background-color: @bg-grey;
 }
 
-.page-footer__contacts {
-  width: 280px;
-  margin: 0 auto;
-}
-
 .page-footer__wrapper {
-  width: 320px;
-  margin: 0 auto;
+  width: auto;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -24,7 +18,7 @@
   border-bottom: 1px solid rgba(17, 17, 17, 0.1);
 }
 
-.page-footer__logo [href] {
+.page-footer__logo-image {
   &:hover {
     opacity: 0.8;
   }
@@ -47,15 +41,11 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer__contacts {
-    width: 708px;
-  }
-
   .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 708px;
+    width: auto;
 
     border-bottom: none;
   }
@@ -68,6 +58,7 @@
 
   .page-footer__wrapper {
     width: 1220px;
+    margin: 0 auto;
   }
 
   .page-footer__contacts {
@@ -78,5 +69,10 @@
 
     width: 570px;
     height: 201px;
+  }
+
+  .page-footer__map {
+    max-width: 1300px;
+    margin: 0 auto;
   }
 }
