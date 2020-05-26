@@ -1,7 +1,6 @@
 .programs {
   width: auto;
-  padding-left: 6%;
-  padding-right: 6%;
+  padding: 0 6.1%;
 }
 
 .programs__list {
@@ -12,20 +11,19 @@
 
 .programs__item {
   margin-bottom: 20px;
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 22px;
+  padding: 30px 7% 22px;
 
   background-color: @bg-grey;
+
+  &:last-child {
+    margin-bottom: 17px;
+  }
 }
 
 .programs__title {
   position: relative;
 
-  margin: 0;
-  margin-bottom: 30px;
-  margin-left: 70px;
+  margin: 0 0 30px 71px;
 
   .oswald();
   .text-size(24px; 1.54);
@@ -36,13 +34,50 @@
 
     position: absolute;
     top: -6px;
-    left: -70px;
+    left: -68px;
 
     width: 50px;
     height: 51px;
 
     background: @bg-green;
     border-radius: 50%;
+  }
+
+  &--slim {
+    position: relative;
+
+    &::after {
+      position: absolute;
+
+      content: "";
+
+      top: -8px;
+      left: -60px;
+
+      width: 35px;
+      height: 49px;
+
+      background-image: url("../img/cat-slim.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--pro {
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 5px;
+      left: -76px;
+
+      width: 67px;
+      height: 28px;
+
+      background-image: url("../img/cat-pro.svg");
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -54,56 +89,72 @@
 }
 
 .programs__to-catalog {
-  position: relative;
-
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 20px;
 
   .oswald();
   .text-size(16px; 1);
   text-transform: uppercase;
 
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 28px;
-    left: 95px;
-
-    width: 25px;
-    height: 2px;
-    background: #3f4242;
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
   }
+}
+
+.programs__right-arrow {
+  position: relative;
+
+  display: block;
+  width: 23px;
+  height: 2px;
+  margin-left: 13px;
+
+  background: @black-two;
 
   &::after {
     content: "";
 
     position: absolute;
-    top: 23px;
-    left: 115px;
+    top: -5px;
+    right: 0;
 
     border: 6px solid @bg-white;
     border-right-width: 0;
-    border-left-color: #3f4242;
+    border-left-color: @black-two;
     border-top-color: transparent;
     border-bottom-color: transparent;
+  }
+
+  &:hover {
+    width: 34px;
+  }
+
+  &:active {
+    width: 34px;
+    opacity: 30%;
   }
 }
 
 @media (min-width: @tablet-width) {
   .programs {
     width: auto;
+    margin-top: -12px;
     margin-bottom: 45px;
-    padding-left: 3.9%;
-    padding-right: 3.9%;
+    padding: 0 3.9%;
   }
 
   .programs__item {
-    margin-bottom: 30px;
-    padding-top: 75px;
-    padding-left: 51px;
-    padding-right: 50px;
-    padding-bottom: 60px;
+    margin-bottom: 32px;
+    padding: 76px 7.3% 60px;
+
+    &:nth-child(2) .programs__desc {
+      width: 56.5%;
+    }
+
+    &:last-child {
+      margin-bottom: 32px;
+    }
   }
 
   .programs__title {
@@ -113,17 +164,37 @@
     .text-size(36px; 1.03);
 
     &::before {
-      top: 15px;
-      left: 70%;
+      top: 16px;
+      right: 10px;
+      left: auto;
 
       width: 200px;
       height: 200px;
     }
+
+    &--slim::after {
+      top: 6px;
+      right: 40px;
+      left: auto;
+
+      width: 141px;
+      height: 194px;
+    }
+
+    &--pro::after {
+      top: 60px;
+      right: -24px;
+      left: auto;
+
+      width: 268px;
+      height: 113px;
+    }
   }
 
   .programs__desc {
-    width: 70%;
-    margin-bottom: 16px;
+    width: 62%;
+    padding: 0;
+    margin-bottom: 36px;
 
     .text-size(16px; 1.5);
 
@@ -131,6 +202,8 @@
   }
 
   .programs__to-catalog {
+    width: 50%;
+
     font-size: 20px;
 
     &::before {
@@ -141,12 +214,17 @@
       left: 150px;
     }
   }
+
+  .programs__right-arrow {
+    margin-left: 24px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .programs {
     width: 1220px;
     margin: 0 auto;
+    margin-bottom: 40px;
     padding: 0;
   }
 
@@ -157,12 +235,22 @@
   }
 
   .programs__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 570px;
+    padding-left: 52px;
+    padding-right: 52px;
+    padding-bottom: 62px;
+
+    &:nth-child(2) .programs__desc {
+      width: auto;
+    }
   }
 
   .programs__title {
-    padding-left: 165px;
-    margin-bottom: 75px;
+    padding-left: 163px;
+    margin-bottom: 74px;
 
     &::before {
       top: -28px;
@@ -170,6 +258,22 @@
 
       width: 100px;
       height: 100px;
+    }
+
+    &--slim::after {
+      top: -35px;
+      left: 15px;
+
+      width: 71px;
+      height: 97px;
+    }
+
+    &--pro::after {
+      top: -7px;
+      left: -17px;
+
+      width: 134px;
+      height: 57px;
     }
   }
 

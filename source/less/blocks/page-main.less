@@ -1,20 +1,32 @@
+.page-main--form {
+  overflow: hidden;
+}
+
 .page-main__title {
   width: auto;
   margin: 0;
-  margin-bottom: 26px;
-  padding: 0 6%;
+  margin-bottom: 28px;
+  padding: 0 6.1%;
 
   .big-title();
+
+  &--form {
+    margin-bottom: 25px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-main__title {
     width: 708px;
     margin-bottom: 163px;
-    padding: 0 3.5%;
+    padding: 20px 3.5% 0;
 
     .text-size(60px; 1);
     text-align: left;
+
+    &--form {
+      margin-bottom: 55px;
+    }
   }
 }
 
@@ -22,7 +34,17 @@
   .page-main__title {
     width: 1220px;
     margin: 0 auto;
-    margin-bottom: 163px;
-    padding: 0;
+    margin-bottom: 166px;
+    margin-top: -24px;
+    padding-top: 38px;
+
+    &--form {
+      margin-bottom: 52px;
+      padding-top: 40px;
+    }
+
+    &--catalog {
+      padding-left: 0;
+    }
   }
 }

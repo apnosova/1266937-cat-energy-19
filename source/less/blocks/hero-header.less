@@ -1,6 +1,4 @@
 .hero-header {
-  position: relative;
-
   margin-bottom: 22px;
 
   .oswald();
@@ -10,12 +8,8 @@
 
 .hero-header__wrapper {
   height: 305px;
-  margin: 0;
-  margin-top: -15px;
-  margin-bottom: 137px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 27px;
+  margin: -15px 0 135px;
+  padding: 27px 20px 0;
 
   background-color: #65a93c;
   background-image: url("../img/index-background-mobile@1x.jpg");
@@ -35,8 +29,8 @@
 
 .hero-header__title {
   margin: 0 auto;
-  padding: 0;
   margin-bottom: 25px;
+  padding: 0;
 
   .text-size(36px; 1);
   font-weight: 400;
@@ -63,7 +57,6 @@
     height: auto;
     margin: 0;
     padding: 0;
-    padding-top: 15px;
 
     text-align: left;
     color: @black-two;
@@ -75,17 +68,20 @@
   .hero-header__text {
     width: 650px;
     margin: 0;
-    padding-left: 90px;
+    padding-left: 88px;
   }
 
   .hero-header__title {
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 41px;
+    padding-top: 20px;
 
     font-size: 60px;
   }
 
   .hero-header__slogan {
+    margin-bottom: 20px;
+
     font-size: 20px;
   }
 
@@ -97,49 +93,27 @@
   .hero-header__pickup-program {
     position: absolute;
 
-    top: 30%;
+    top: 29.75%;
     left: 90px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .hero-header {
-    position: relative;
-
     width: 1220px;
-    margin-bottom: 80px;
-
-    &::before {
-      content: "";
-
-      position: absolute;
-      top: -25%;
-      left: 50%;
-      z-index: -1;
-
-      width: 50vw;
-      height: 696px;
-
-      background-color: #65a93c;
-      background-image: url("../img/index-background-desktop@1x.jpg");
-      background-position: right;
-      background-repeat: no-repeat;
-      background-size: 720px auto;
-
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/index-background-desktop@2x.jpg");
-      }
-
-      overflow: hidden;
-    }
+    margin-bottom: 12px;
   }
 
   .hero-header__wrapper {
     display: flex;
-    min-height: 696px;
-    margin-bottom: 80px;
+    min-height: 555px;
+    margin-bottom: 0;
 
     background-color: transparent;
+  }
+
+  .hero-header__title {
+    padding-top: 11px;
   }
 
   .hero-header__text {
@@ -148,19 +122,17 @@
   }
 
   .hero-header__pickup-program {
-    top: 35%;
+    top: 44.4%;
     left: 80px;
   }
 
   .hero-header__image-wrapper {
-    width: 552px;
-    height: 499px;
-    margin-top: -40px;
-    margin-left: -110px;
+    margin-top: -70px;
+    margin-left: -100px;
   }
 
   .hero-header__image {
     width: 552px;
-    height: 499px;
+    height: auto;
   }
 }

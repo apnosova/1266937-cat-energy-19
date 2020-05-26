@@ -1,6 +1,5 @@
 .extra-goods__wrapper {
-  padding-left: 6%;
-  padding-right: 6%;
+  padding: 0 6.1%;
 }
 
 .extra-goods__item {
@@ -15,10 +14,8 @@
 
 .extra-goods__section-title {
   margin: 0;
-  padding: 0;
-  padding-right: 23px;
-  padding-left: 6%;
-  margin-bottom: 35px;
+  margin-top: -3px;
+  padding: 0 23px 35px 6.1%;
 
   .fancy-subtitle();
 
@@ -27,7 +24,7 @@
 
     position: relative;
     top: 3px;
-    right: -24px;
+    right: -17px;
     display: inline-block;
     vertical-align: middle;
 
@@ -59,7 +56,7 @@
 
 .extra-goods__desc {
   width: 100%;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 
   line-height: 1;
 
@@ -75,8 +72,7 @@
 
 .extra-goods__field,
 .extra-goods__value {
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
 }
 
 .extra-goods__list {
@@ -91,9 +87,7 @@
   align-items: flex-end;
   height: 289px;
   margin-bottom: 35px;
-  padding-left: 55px;
-  padding-right: 55px;
-  padding-bottom: 41px;
+  padding: 0 55px 42px;
 
   background-color: @bg-green;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
@@ -134,12 +128,12 @@
 @media (min-width: @tablet-width) {
   .extra-goods__wrapper {
     width: auto;
-    padding-left: 3.9%;
-    padding-right: 3.9%;
+    padding: 0 3.9%;
   }
 
   .extra-goods__section-title {
-    padding-right: 38px;
+    padding-left: 7.5%;
+    margin-bottom: 44px;
 
     font-size: 36px;
 
@@ -150,7 +144,7 @@
 
       position: relative;
       top: 6px;
-      left: -38px;
+      left: -30px;
       display: inline-block;
       vertical-align: middle;
 
@@ -165,14 +159,12 @@
 
     &::after {
       top: 6px;
-      right: -36px;
+      right: -30px;
     }
   }
 
   .extra-goods__item {
-    padding-left: 5.2%;
-    padding-right: 5.15%;
-    padding-bottom: 25px;
+    padding: 0 5.15% 23px 5.2%;
 
     border: @border-grey;
     border-bottom: none;
@@ -183,7 +175,7 @@
   }
 
   .extra-goods__desc tbody {
-    width: 100%;
+    min-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -203,7 +195,7 @@
   .extra-goods__field {
     width: 291px;
     padding: 0;
-    padding-top: 23px;
+    padding-top: 24px;
 
     text-align: right;
   }
@@ -211,7 +203,7 @@
   .extra-goods__value {
     width: 120px;
     padding: 0;
-    padding-top: 23px;
+    padding-top: 24px;
   }
 
   .extra-goods__desc td {
@@ -219,7 +211,7 @@
   }
 
   .extra-goods__list {
-    margin-bottom: 72px;
+    margin-bottom: 70px;
   }
 
   .extra-goods__gift {
@@ -227,11 +219,7 @@
     justify-content: flex-end;
     height: 200px;
     margin-bottom: 76px;
-    padding: 0;
-    padding-left: 90px;
-    padding-right: 105px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 105px 20px 90px;
 
     background-color: @bg-green;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
@@ -267,12 +255,15 @@
     padding: 0;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
   }
 
   .extra-goods__section-title {
     padding-left: 0;
+    margin-left: -10px;
 
     &::before {
+      left: -27px;
       width: 100vw;
       margin-left: -100vw;
     }
@@ -301,7 +292,7 @@
   .extra-goods__title {
     width: 200px;
     padding-top: 24px;
-    padding-bottom: 13px;
+    padding-bottom: 11px;
   }
 
   .extra-goods__field {
