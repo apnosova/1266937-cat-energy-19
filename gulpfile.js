@@ -39,7 +39,6 @@ gulp.task("server", function () {
     open: true,
     cors: true,
     ui: false,
-    browser: "chrome"
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
