@@ -111,6 +111,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    z-index: -10;
 
     counter-reset: number;
   }
@@ -180,6 +181,11 @@
   .advantages__item {
     width: 245px;
     padding-right: 0;
+    margin-bottom: 0;
+
+    &:nth-child(n+2) {
+      margin-bottom: 40px;
+    }
   }
 
   .advantages__item .advantages__desc {

@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <!--Для IE11-->
     <script>
@@ -93,9 +95,10 @@
         </ul>
       </section>
       <section class="slider">
+        <h2 class="slider__title">Живой пример</h2>
+        <div class="slider__gradient">
         <div class="slider__wrapper">
         <div class="slider__living-example">
-          <h2 class="slider__title">Живой пример</h2>
           <p class="slider__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит&nbsp;по 16 часов в день.</p>
           <div class="slider__stats">
             <div class="slider__table">
@@ -112,6 +115,7 @@
             <p class="slider__expenses"><span>Затраты на питание:</span><span>15 000 руб.</span></p>
           </div>
         </div>
+        <div class="slider__before-after-wrapper">
         <div class="slider__before-after">
           <ul class="slider__before-after-images">
             <li class="slider__before-wrapper">
@@ -138,17 +142,19 @@
           <div class="slider__range-controls">
             <button class="slider__caption slider__caption--before">Было</button>
             <div class="slider__scale">
-              <button class="slider__control"></button>
+              <button class="slider__control" aria-label="Кнопка выбора было-стало"></button>
             </div>
             <button class="slider__caption slider__caption--after">Стало</button>
           </div>
+          </div>
+        </div>
         </div>
         </div>
         </section>
       <footer class="page-footer">
         <div class="page-footer__contacts contacts">
           <p class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-          <p class="contacts__text"><span>ул. Большая Конюшенная, д. 19/8</span><span>Санкт-Петербург</span></p>
+          <p class="contacts__text"><span>ул. Большая Конюшенная, д.&nbsp;19/8</span><span>Санкт-Петербург</span></p>
         </div>
         <div class="page-footer__map">
           <div class="page-footer__map-image-wrapper">

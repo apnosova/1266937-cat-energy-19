@@ -13,21 +13,21 @@
   background-color: @bg-green;
   border: none;
 
+  &:hover {
+    background-color: @bg-grass;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: @bg-grass;
+  }
+
   &--pickup-program {
     width: calc(100% - 12.2%);
     padding: 11px;
 
     .text-size(14px; 1.29);
-
-    &:hover {
-      background-color: @bg-grass;
-    }
-
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-
-      background-color: @bg-grass;
-    }
   }
 
   &--order {
