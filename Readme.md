@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ангелина Носова](https://up.htmlacademy.ru/adaptive/19/user/1266937).
-* Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/id252055).
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
 
 ---
 
